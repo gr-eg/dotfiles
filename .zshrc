@@ -77,35 +77,16 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# Include aliases
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 source ~/.aliases
 source ~/.environment
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 export EDITOR=atom
 
-test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
-
-export NVM_DIR="/Users/greg/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/greg/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables shell command completion for gcloud.
-source '/Users/greg/google-cloud-sdk/completion.zsh.inc'
-
+# Add to auto CD Path
 setopt auto_cd
-cdpath=(~/Rails ~/Development)
-alias config='/usr/bin/git --git-dir=/Users/greg/.cfg/ --work-tree=/Users/greg'
+cdpath=(~/Development)
+
+# Include local environment config
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
