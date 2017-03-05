@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 " ===========Start===============
 
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
 
 " Colors
 Plugin 'nanotech/jellybeans.vim'
@@ -35,6 +36,7 @@ syntax on                 " Enable syntax highlighting
 
 set backspace=2   " Make backspace do you would expect
 set ruler         " Always show the cursor position
+set laststatus=2  " Always show status line.
 
 " Soft tabs of 2 spaces
 set tabstop=2
