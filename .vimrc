@@ -37,6 +37,8 @@ syntax on                 " Enable syntax highlighting
 set backspace=2   " Make backspace do you would expect
 set ruler         " Always show the cursor position
 set laststatus=2  " Always show status line.
+set wildmenu      " visual autocomplete for command menu
+set cursorline    " Highlight the current line
 
 " Soft tabs of 2 spaces
 set tabstop=2
@@ -74,8 +76,10 @@ nnoremap <leader><leader> <c-^>
 " Exclude paths from ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
-" Highlight the current line
-set cursorline
-
-" visual autocomplete for command menu
-set wildmenu
+" Move lines up and down with Ctrl-j|k
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
