@@ -14,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'thoughtbot/vim-rspec'
 
 " Colors
 Plugin 'nanotech/jellybeans.vim'
@@ -39,6 +40,7 @@ set ruler         " Always show the cursor position
 set laststatus=2  " Always show status line.
 set wildmenu      " visual autocomplete for command menu
 set cursorline    " Highlight the current line
+set number        " Show line numbers
 
 " Soft tabs of 2 spaces
 set tabstop=2
@@ -74,7 +76,7 @@ let g:ctrlp_prompt_mappings = {
 nnoremap <leader><leader> <c-^>
 
 " Exclude paths from ctrlp
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*
 
 " Move lines up and down with Ctrl-j|k
 nnoremap <C-j> :m .+1<CR>==

@@ -2,3 +2,7 @@ alias gti=git
 alias h=heroku
 alias be='bundle exec'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias bde='cd ~/projects/receptive && ./scripts/dev/boot-dev-env.sh && cd -'
+alias rapi='cd ~/projects/receptive/apps/api2/src'
+alias rfro='cd ~/projects/receptive/apps/frontend'
+
