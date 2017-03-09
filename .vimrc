@@ -82,7 +82,7 @@ let g:ctrlp_prompt_mappings = {
 nnoremap <leader><leader> <c-^>
 
 " Exclude paths from ctrlp
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*,*/vendor/cache/*
 
 " Move lines up and down with Ctrl-j|k
 nnoremap <C-j> :m .+1<CR>==
