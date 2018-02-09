@@ -15,12 +15,13 @@
    excludesfile = ~/.gitignore.global
    autocrlf = input
    editor=vim
-[diff]
-  compactionHeuristic = true
-  tool=kdiff3
+[merge]
+  tool=opendiff
 [fetch]
   prune = true
 [rebase]
   autosquash = true
 [include]
   path = ~/.gitconfig.local
+[credential]
+	helper = osxkeychain
